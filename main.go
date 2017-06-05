@@ -25,7 +25,6 @@ func main() {
 
 			// optionally:
 			println(app.Name + " started.")
-
 			if err := server.Run(app.Host); err != nil {
 				// log any errors or http closed to our file.
 				server.Log("'%s': %v", app.Name, err)

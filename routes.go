@@ -3,7 +3,7 @@ package main
 import (
 	"github.com/kataras/iris"
 	// Import handlers package, change this to your own package.
-	"github.com/massanchik/iris-boilerplate/handlers"
+	"github.com/iris-contrib/iris-boilerplate/handlers"
 )
 
 //Setup routes
