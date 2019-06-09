@@ -1,13 +1,16 @@
 package handlers
 
 import (
-	"github.com/kataras/iris"
+	"github.com/kataras/iris/context"
 )
 
-//Handler form "/"(index) route
-func Index(c *iris.Context) {
-	c.Render("index.html", map[string]interface{}{
-		"title": "App Title",
-		"content": "App Content",
-	})
+//Index form "/" (index) route
+func Index(ctx context.Context) {
+	// template layout
+	ctx.ViewLayout("layout.html")
+	// template data, or use a custom struct as the second input parameter
+	ctx.ViewData("title", "App Title")
+	ctx.ViewData("content", "App Content")
+	// execute template
+	ctx.View("index.html")
 }
